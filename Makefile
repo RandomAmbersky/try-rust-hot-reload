@@ -1,8 +1,10 @@
-run:
-	cargo run
+DOCKER_COMPOSE_FILE = "./docker/docker-compose.yml"
 
-build:
-	cargo build
+docker-up: docker-build
+	docker compose --file ${DOCKER_COMPOSE_FILE} up --build --force-recreate
 
-test:
-	cargo test
+docker-build:
+	docker compose --file ${DOCKER_COMPOSE_FILE} build
+
+web:
+	python3 -m http.server 8000 -d ./app/dist

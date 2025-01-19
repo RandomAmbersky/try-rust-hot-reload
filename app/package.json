@@ -1,0 +1,20 @@
+{
+  "name": "zx-playground",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "GNU3",
+  "scripts": {
+    "start": "webpack serve",
+    "dist": "webpack --mode production --config webpack.config.js"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.3",
+    "raw-loader": "^4.0.2",
+    "terser-webpack-plugin": "^5.3.11",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "copy-webpack-plugin": "^12.0.2"
+  }
+}
