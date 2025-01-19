@@ -9,12 +9,15 @@
     "dist": "webpack --mode production --config webpack.config.js"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
     "html-webpack-plugin": "^5.6.3",
     "raw-loader": "^4.0.2",
     "terser-webpack-plugin": "^5.3.11",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.0",
-    "copy-webpack-plugin": "^12.0.2"
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "@wasm-tool/wasm-pack-plugin": "^1.7.0"
   }
 }
