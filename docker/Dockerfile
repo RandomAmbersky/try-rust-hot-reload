@@ -10,7 +10,6 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 # need for cc compiler for rust wasm lib
 RUN apk --no-cache add build-base
 
-
 ENV PATH="/root/.cargo/bin:${PATH}"
 
 # Install python/pip (нужно для node-gyp который хочет его для parcel-bundler)

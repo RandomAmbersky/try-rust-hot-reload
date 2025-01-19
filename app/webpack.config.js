@@ -7,6 +7,9 @@ const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  experiments: {
+    asyncWebAssembly: true,
+  },
   module: {
     // rules: [{ test: /\.asm$/, use: 'raw-loader' }],
   },
