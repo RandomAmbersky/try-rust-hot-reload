@@ -2,11 +2,11 @@ const path = require('path');
 
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   module: {
-    rules: [{ test: /\.asm$/, use: 'raw-loader' }],
+    // rules: [{ test: /\.asm$/, use: 'raw-loader' }],
   },
   optimization: {
     minimize: true,
