@@ -8,8 +8,8 @@ pub struct EngineWebFacade {
     e: Box<dyn IEngine>,
 }
 
-impl EngineWebFacade {
-    pub fn new() -> Self {
+impl Default for EngineWebFacade {
+    fn default() -> Self {
         let engige = engine::new();
         let e = Box::new(engige);
         EngineWebFacade { e }
@@ -18,7 +18,7 @@ impl EngineWebFacade {
 
 impl IEngine for EngineWebFacade {
     fn add(&self, left: u64, right: u64) -> u64 {
-        return self.e.add(left, right);
+        self.e.add(left, right)
     }
 }
 
@@ -33,5 +33,5 @@ extern "C" {
 pub fn init() -> EngineWebFacade {
     panic::set_hook(Box::new(console_error_panic_hook::hook));
     log("Hello, world from rust!");
-    return EngineWebFacade {};
+    EngineWebFacade::default()
 }
