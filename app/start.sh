@@ -1,13 +1,17 @@
 #!/bin/bash
 
-npm install --verbose
+# npm install --verbose
+npm ci --verbose
 
 # Get Rust
-RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
-
+curl https://sh.rustup.rs -sSf | bash -s -- -y
 export PATH="/root/.cargo/bin:${PATH}"
-export RUST_LOG=info
 
+# Get Rust
+# RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+
+# export PATH="/root/.cargo/bin:${PATH}"
+# export RUST_LOG=info
 
 curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 cargo install -f wasm-bindgen-cli
