@@ -2,11 +2,16 @@ const path = require('path');
 
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
+
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  experiments: {
+    asyncWebAssembly: true,
+  },
   module: {
-    rules: [{ test: /\.asm$/, use: 'raw-loader' }],
+    // rules: [{ test: /\.asm$/, use: 'raw-loader' }],
   },
   optimization: {
     minimize: true,
@@ -29,7 +34,10 @@ module.exports = {
     // }),
     new HtmlWebpackPlugin({
       template: "index.html"
-    })
+    }),
+    new WasmPackPlugin({
+      crateDirectory: path.resolve(__dirname, './rustproject') // Путь до директории с вашим Rust-кодом
+  })
   ],
   mode: 'development', // Режим разработки
   devtool: 'inline-source-map', // Карты исходников для дебага

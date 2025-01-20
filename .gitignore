@@ -1,3 +1,8 @@
-/target
-/node-modules
+target
+node_modules
 static
+dist
+pkg
+cache
+git-set-local.sh
+git-reset-author.sh

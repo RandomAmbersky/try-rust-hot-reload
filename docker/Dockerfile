@@ -1,6 +1,11 @@
 # Используем официальный образ Node.js
 FROM node:23-alpine
 
+
+RUN apk --no-cache add bash curl mc
+# need for cc compiler for rust wasm lib
+RUN apk --no-cache add build-base
+
 # Install python/pip (нужно для node-gyp который хочет его для parcel-bundler)
 # ENV PYTHONUNBUFFERED=1
 # RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
