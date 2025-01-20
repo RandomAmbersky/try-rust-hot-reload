@@ -4,3 +4,5 @@ static
 dist
 pkg
 cache
+git-set-local.sh
+git-reset-author.sh
