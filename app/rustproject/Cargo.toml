@@ -8,7 +8,7 @@ crate-type = ["cdylib"] # Тип библиотеки для WebAssembly
 
 [dependencies]
 wasm-bindgen = "0.2" # Зависимость для взаимодействия между Rust и JavaScript
-console_error_panic_hook = { version = "0.1", optional = true } # Опциональная зависимость для обработки ошибок
+console_error_panic_hook = "0.1.7"
 
 [dev-dependencies]
 wasm-pack = "0.10" # Инструмент для упаковки Wasm в формат, подходящий для Webpack
