@@ -6,6 +6,14 @@ RUN apk --no-cache add bash curl mc
 # need for cc compiler for rust wasm lib
 RUN apk --no-cache add build-base
 
+# Get Rust
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+ENV RUST_LOG=info
+
+RUN curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+RUN cargo install -f wasm-bindgen-cli
+
 # Install python/pip (нужно для node-gyp который хочет его для parcel-bundler)
 # ENV PYTHONUNBUFFERED=1
 # RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
