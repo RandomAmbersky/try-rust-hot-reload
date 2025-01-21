@@ -1,3 +1,3 @@
-mod EngineInterface;
+mod engine_interface;
 
-pub use EngineInterface::IEngine;
+pub use engine_interface::IEngine;
