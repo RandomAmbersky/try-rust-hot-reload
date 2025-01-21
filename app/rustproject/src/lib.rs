@@ -1,5 +1,7 @@
 extern crate console_error_panic_hook;
+
 use engine::IEngine;
+
 use std::panic;
 use wasm_bindgen::prelude::*;
 
