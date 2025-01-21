@@ -8,13 +8,10 @@ impl IEngine for Engine {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
+mod tests  {
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn test_add() {
+        let engine = Engine {};
+        assert_eq!(engine.add(2, 3), 5);
     }
 }
