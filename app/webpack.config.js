@@ -43,7 +43,7 @@ module.exports = {
         path.resolve(crateDirectory, './modules'),
         path.resolve(crateDirectory, './src')
       ],
-  })
+    })
   ],
   mode: 'development', // Режим разработки
   devtool: 'inline-source-map', // Карты исходников для дебага
