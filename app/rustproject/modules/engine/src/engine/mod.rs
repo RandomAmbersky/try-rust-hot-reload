@@ -4,11 +4,11 @@ pub struct Engine {}
 
 impl IEngine for Engine {
     fn add(&self, left: u64, right: u64) -> u64 {
-        return left + right;
+        return left + right + 2;
     }
 }
 
-mod tests  {
+mod tests {
     #[test]
     fn test_add() {
         let engine = Engine {};

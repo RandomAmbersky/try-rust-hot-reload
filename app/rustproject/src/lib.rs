@@ -12,8 +12,8 @@ pub struct EngineWebFacade {
 
 impl Default for EngineWebFacade {
     fn default() -> Self {
-        let engige = engine::new();
-        let e = Box::new(engige);
+        let engine = engine::new();
+        let e = Box::new(engine);
         EngineWebFacade { e }
     }
 }

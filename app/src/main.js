@@ -6,7 +6,7 @@ import { init } from '../rustproject/pkg'
 async function run() {
     const engineWebFacade = await init(); // Инициализируем модуль Wasm
     console.log(engineWebFacade)
-    const result = engineWebFacade.add(BigInt(100),BigInt(10))
+    const result = engineWebFacade.add(BigInt(10),BigInt(10))
     console.log(result)
 }
 
