@@ -7,9 +7,4 @@ services:
       - "44489:44489"
     volumes:
       - ../app:/app
-      - ../cache/.cargo:/root/.cargo/
-      - ../cache/.rustup:/root/.rustup/
-      - ../cache/.npm:/root/.npm/
     command: sh -c "./start.sh"
-    # command: tail -f /dev/null
-    # command: parcel index.html --hmr-port 44489

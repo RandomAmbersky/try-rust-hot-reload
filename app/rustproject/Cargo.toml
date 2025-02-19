@@ -7,11 +7,12 @@ edition = "2021"
 crate-type = ["cdylib"] # Тип библиотеки для WebAssembly
 
 [dependencies]
+engine = { path = "modules/engine" }
 wasm-bindgen = "0.2" # Зависимость для взаимодействия между Rust и JavaScript
 console_error_panic_hook = "0.1.7"
 
 [dev-dependencies]
-wasm-pack = "0.10" # Инструмент для упаковки Wasm в формат, подходящий для Webpack
+wasm-pack = "0.13.1"
 
 [profile.release]
 panic = "abort" # Оптимизация для релизной версии[dependencies]
