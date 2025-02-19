@@ -4,6 +4,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 
+const crateDirectory = path.resolve(__dirname, './rustproject')
+
 // const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -36,7 +38,11 @@ module.exports = {
       template: "index.html"
     }),
     new WasmPackPlugin({
-      crateDirectory: path.resolve(__dirname, './rustproject') // Путь до директории с вашим Rust-кодом
+      crateDirectory: crateDirectory, // Путь до директории с вашим Rust-кодом
+      watchDirectories: [ // Указываем директории для отслеживания изменений
+        path.resolve(crateDirectory, './modules'),
+        path.resolve(crateDirectory, './src')
+      ],
   })
   ],
   mode: 'development', // Режим разработки

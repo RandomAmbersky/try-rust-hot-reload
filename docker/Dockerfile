@@ -12,6 +12,7 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 ENV RUST_LOG=info
 
 RUN curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+RUN rustup target add wasm32-unknown-unknown
 RUN cargo install -f wasm-bindgen-cli
 
 # Install python/pip (нужно для node-gyp который хочет его для parcel-bundler)
