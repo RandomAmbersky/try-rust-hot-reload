@@ -2,9 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "1234:1234"
       - "8080:8080"
-      - "44489:44489"
     volumes:
       - ../app:/app
     command: sh -c "./start.sh"

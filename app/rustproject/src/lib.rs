@@ -21,7 +21,6 @@ impl Default for EngineWebFacade {
 #[wasm_bindgen]
 impl EngineWebFacade {
     pub fn add(&self, left: u64, right: u64) -> u64 {
-        self.e.add(&left, &right);
         self.e.add(&left, &right)
     }
 }

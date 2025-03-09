@@ -1,18 +1,18 @@
 [package]
 name = "try-rust-hot-reload"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [lib]
 crate-type = ["cdylib"] # Тип библиотеки для WebAssembly
 
 [dependencies]
 engine = { path = "modules/engine" }
-wasm-bindgen = "0.2" # Зависимость для взаимодействия между Rust и JavaScript
+wasm-bindgen = "0.2"                 # Зависимость для взаимодействия между Rust и JavaScript
 console_error_panic_hook = "0.1.7"
 
 [dev-dependencies]
 wasm-pack = "0.13.1"
 
 [profile.release]
-panic = "abort" # Оптимизация для релизной версии[dependencies]
+panic = "abort" # Оптимизация для релизной версии [dependencies]
